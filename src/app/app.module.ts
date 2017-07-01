@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule, MaterialModule, MdNativeDateModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages.component';
@@ -13,9 +15,9 @@ import { MessagesComponent } from './messages.component';
     MessagesComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule
+    HttpModule, FormsModule, BrowserModule, BrowserAnimationsModule,
+    MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
+    MaterialModule, MdNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
