@@ -1,0 +1,7 @@
+<p *ngFor="let textMessage of textMessages">
+  Message is:
+  <md-card>
+    <md-card-title>{{ textMessage.owner }}</md-card-title>
+     <md-card-content>{{ textMessage.text }}</md-card-content>
+  </md-card>
+</p>
