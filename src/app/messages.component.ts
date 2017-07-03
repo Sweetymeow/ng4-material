@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { WebService } from './web.service';
 
-interface TextMessage {
-    text: string;
-    owner: string;
-}
+import { TextMessage } from './textMessage';
 
 @Component({
   selector: 'messages',
@@ -16,9 +14,9 @@ export class MessagesComponent implements OnInit {
     {  text: 'some text', owner: 'Tim'  },
     {  text: 'other text', owner: 'Han'  }
   ];
-    myData: Array<any>;
+  myData: Array<any>;
 
-  constructor(private http : Http) {
+  constructor(private http : Http, private webService: WebService) {
     this.http.get('http://jsonplaceholder.typicode.com/photos')
       .map( response => {
         console.log(response.json());
@@ -28,5 +26,8 @@ export class MessagesComponent implements OnInit {
       // Fake Online REST API: https://jsonplaceholder.typicode.com/
    }
 
-  ngOnInit() {}
+   async ngOnInit(){
+    var response  = await this.webService.getMessages();
+    console.log(response.json());
+  }
 }

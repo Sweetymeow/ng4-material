@@ -8,6 +8,7 @@ import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModu
 
 import { AppComponent } from './app.component';
 import { MessagesComponent } from './messages.component';
+import { WebService } from './web.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { MessagesComponent } from './messages.component';
     MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule,
     MaterialModule, MdNativeDateModule
   ],
-  providers: [],
+  providers: [ WebService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

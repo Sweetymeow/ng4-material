@@ -1,4 +1,4 @@
-<md-grid-list cols="3" rowHeight="2:1">
+<md-grid-list cols="3" rowHeight="2:3">
     <md-grid-tile *ngFor="let message of (myData ? myData.slice(0, 10) : []); let i = index;">
         <md-card>
             <img md-card-image src="{{ message.url }}">
