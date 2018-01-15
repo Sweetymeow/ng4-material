@@ -1,14 +1,14 @@
-import { Ng4MaterialPage } from './app.po';
+import { AppPage } from './app.po';
 
-describe('ng4-material App', () => {
-  let page: Ng4MaterialPage;
+describe('efficiency-chart App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new Ng4MaterialPage();
+    page = new AppPage();
   });
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
