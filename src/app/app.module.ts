@@ -1,9 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { AppComponent } from './app.component';
 
+import { ChartDataService } from './services/chart-data.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ChartDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
