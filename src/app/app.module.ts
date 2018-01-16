@@ -10,10 +10,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule, MatToolbarModule } from '@angular/material';
 import 'hammerjs';
+import { ChartComponent } from './comps/chart/chart.component';
+import { ListComponent } from './comps/list/list.component';
+import { CoffeeComponent } from './comps/coffee/coffee.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChartComponent,
+    ListComponent,
+    CoffeeComponent
   ],
   imports: [
     BrowserModule,
