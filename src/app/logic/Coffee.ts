@@ -1,4 +1,5 @@
 import { PlaceLocation } from '../logic/PlaceLocation';
+import { TastingRating } from '../logic/TastingRating';
 
 export class Coffee{
   type: string;

@@ -7,9 +7,7 @@ export class ChartDataService {
   constructor() { }
 
   // API Sample: https://costco-bakery-planning.cfapps.sap.hana.ondemand.com/api/warehouse/148/dataUtil/getPredictionPerformanceAnalysis/item_id/14368
-  getItem(callback){
-
-  }
+  getItem(){}
 
   getList(callback){
     // TODO Chang it with a real web Service
