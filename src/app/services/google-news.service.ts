@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class GoogleNewsService {
-  newsUrl: string;
+  newUrl: string;
   req : any;
 
   constructor() {
@@ -10,7 +10,7 @@ export class GoogleNewsService {
   }
 
   sendFetch() {
-    this.req = new Request(this.newsUrl);
+    this.req = new Request(this.newUrl);
 
     // fetch(this.req).then( response => {
     //   console.log(response);
