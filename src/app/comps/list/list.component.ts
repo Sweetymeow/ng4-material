@@ -9,10 +9,12 @@ import { GoogleNewsService } from '../../services/google-news.service';
   styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
-
+  title: string
   list: [Coffee]
 
-  constructor(private chartData: ChartDataService, private news: GoogleNewsService) { }
+  constructor(private chartData: ChartDataService, private news: GoogleNewsService) {
+    this.title = "List Comp";
+  }
 
   ngOnInit() {
     this.chartData.getList( dataList => {
