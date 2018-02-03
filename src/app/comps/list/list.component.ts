@@ -17,9 +17,10 @@ export class ListComponent implements OnInit {
   ngOnInit() {
     this.chartData.getList( dataList => {
       this.list = dataList;
+      console.log(this.list);
     });
 
-    this.news.sendFetch();
+    // this.news.sendFetch();
   }
 
 }
