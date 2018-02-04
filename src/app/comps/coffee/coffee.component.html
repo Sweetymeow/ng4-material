@@ -1,12 +1,33 @@
 <!-- <mat-card *ngFor="let coffee of list">
   COFFEE Components
 </mat-card> -->
-<form class="" action="index.html" method="post">
-  <mat-form-field class="coffeeForm-full-width">
-    <input matInput placeholder="Coffee Name" value="coffee_type">
+<form class="" action="index.html" method="post" class="coffee-form">
+  <mat-form-field class="formInput-full-width">
+    <input matInput placeholder="Coffee Name" [(ngModel)]="coffee.name" name="name">
+    <!-- <input matInput placeholder="Coffee Name"  value="coffee_type"> -->
+  </mat-form-field>
+  <mat-form-field class="formInput-full-width">
+    <input matInput placeholder="Coffee Place" [(ngModel)]="coffee.place" name="place">
+    <!-- <input matInput placeholder="Coffee Name"  value="coffee_type"> -->
   </mat-form-field>
 
-  <mat-form-field class="coffeeForm-full-width">
-    <textarea matInput placeholder="Leave a comment"></textarea>
+  <mat-form-field>
+    <mat-select placeholder="Coffee Type" [(ngModel)] = "coffee.type" name="type">
+      <mat-option *ngFor="let type of types"  [value]="type">
+        {{ type }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
+
+  <mat-form-field class="formInput-full-width">
+    <textarea matInput placeholder="Leave a comment" name="coffeeComment"></textarea>
+  </mat-form-field>
+
+  <mat-card class="debug">
+    <mat-card-header>
+      <mat-card-title> Debug - Show coffee object</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>{{ coffee | json }}</mat-card-content>
+  </mat-card>
+
 </form>
