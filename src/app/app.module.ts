@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { HttpClientModule } from '@angular/common/http';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService }  from './services/in-memory-data.service';
+
 import { AppComponent } from './app.component';
 import { ChartComponent } from './comps/chart/chart.component';
 import { ListComponent } from './comps/list/list.component';
@@ -16,8 +20,6 @@ import { GoogleNewsService } from './services/google-news.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
   MatSlideToggleModule, MatToolbarModule } from '@angular/material';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService }  from './in-memory-data.service';
 
 import 'hammerjs';
 
@@ -44,6 +46,7 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
     MatSlideToggleModule, MatToolbarModule
