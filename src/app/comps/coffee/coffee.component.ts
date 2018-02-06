@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+
 import { Coffee } from '../../logic/Coffee';
 import { TastingRating } from '../../logic/TastingRating';
+
 import { GeoLocationService } from '../../services/geo-location.service';
+import { ListDataService } from '../../services/list-data.service';
 
 @Component({
   selector: 'app-coffee',
@@ -11,21 +14,36 @@ import { GeoLocationService } from '../../services/geo-location.service';
 })
 
 export class CoffeeComponent implements OnInit {
-  sliderConfige: any = {
-    max: 10,
-    min: 0,
-    tickInt: 1
-  };
+  sliderConfige: any = { max: 10, min: 0, tickInt: 1 };
   routingSubscription: any;
   coffee: Coffee;
   types: Array<string> = ['Cappuccino', 'Flat White', "Espresso", "Affogato", "Caffe Macchiato"];
 
-  constructor(private route: ActivatedRoute, private geoLoc: GeoLocationService) { }
+  tastingEnable: boolean = false;
+
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router, // Use to router.navigate to other page
+    private geoLoc: GeoLocationService,
+    private data: ListDataService) { }
 
   ngOnInit() {
     this.coffee = new Coffee();
+
+    // Get coffee obj for Edit
     this.routingSubscription = this.route.params.subscribe(params => {
-      console.log(params);
+      console.log("Router id:", params);
+
+      if(params.id){
+        this.data.getById(params.id, response =>{
+          this.coffee = response;
+          if(Object.keys(this.coffee.tastingRating).length > 0){
+            this.tastingEnable = true;
+            console.log(`tastingRating is ${this.tastingEnable}`);
+          }
+        })
+      }
+
     });
 
     this.geoLoc.requestLocation( location => {
@@ -49,12 +67,19 @@ export class CoffeeComponent implements OnInit {
     }
   }
 
-  saveRating(){
-    // Save to BE service
-
+  /*-------- Handel Form Button Events (Save / Cancel)---------*/
+  onSaveBtnPress(){ // Save to BE service
+    this.data.saveData(this.coffee, result => { // callback
+      if(result){
+        this.router.navigate(['/']);
+        console.log(result, this.coffee);
+      }
+    });
   }
-  cancelRating(){
-    // Clear the data & return to previous page
+  onCancelBtnPress(){ // Clear the data & return to previous page
+    // Need Router API
+    this.router.navigate(['/']);
+    console.log(this.coffee);
   }
 
 }

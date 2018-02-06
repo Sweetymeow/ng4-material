@@ -13,7 +13,7 @@ import { ListComponent } from './comps/list/list.component';
 import { CoffeeComponent } from './comps/coffee/coffee.component';
 import { NotFoundComponent } from './comps/not-found/not-found.component';
 
-import { ChartDataService } from './services/chart-data.service';
+import { ListDataService } from './services/list-data.service';
 import { GeoLocationService } from './services/geo-location.service';
 import { GoogleNewsService } from './services/google-news.service';
 
@@ -51,7 +51,7 @@ const appRoutes: Routes = [
     MatButtonModule, MatCardModule, MatIconModule, MatInputModule, MatSelectModule, MatSliderModule,
     MatSlideToggleModule, MatToolbarModule
   ],
-  providers: [ChartDataService, GeoLocationService, GoogleNewsService],
+  providers: [ListDataService, GeoLocationService, GoogleNewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
