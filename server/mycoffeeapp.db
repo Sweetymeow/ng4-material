@@ -14,3 +14,4 @@
 }
 {"name":"Cold Brew","place":"American","location":{"address":"","city":"","latitude":37.395659599999995,"longitude":-122.14890390000001},"tastingRating":{},"rating":9,"type":"Cappuccino","_id":"jfwcqOzpUE436GO6"}
 {"name":"White Flat","place":"","location":{"address":"","city":"","latitude":37.3956898,"longitude":-122.148907},"tastingRating":{"aroma":4,"flavor":8,"intensity":6,"sweetness":4},"rating":7,"type":"Caffe Macchiato","_id":"GLyKqmQsz1M6E1ei"}
+{"name":"Ambrosia","place":"Philz Coffee","location":{"address":"3191 Middlefield Rd","city":"Palo Alto","latitude":37.3956679,"longitude":-122.1489195},"tastingRating":{},"type":"Affogato","rating":8,"_id":"YU3dRr0K4NPitNOO"}
