@@ -17,7 +17,7 @@ export class CoffeeComponent implements OnInit {
   sliderConfige: any = { max: 10, min: 0, tickInt: 1 };
   routingSubscription: any;
   coffee: Coffee;
-  types: Array<string> = ['Cappuccino', 'Flat White', "Espresso", "Affogato", "Caffe Macchiato"];
+  types: Array<string> = ['Cappuccino', 'Flat White', "Espresso", "Black Coffee", "Cold Brew", "Drip"];
 
   tastingEnable: boolean = false;
 

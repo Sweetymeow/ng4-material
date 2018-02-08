@@ -1,17 +1,5 @@
-{
-  "name": "White Flat",
-  "place": "",
-  "location": {
-    "address": "",
-    "city": "",
-    "latitude": 37.3956294,
-    "longitude": -122.1489299
-  },
-  "tastingRating": {},
-  "rating": 5,
-  "type": "Caffe Macchiato",
-  "_id": "GLyKqmQsz1M6E1ei"
-}
-{"name":"Cold Brew","place":"American","location":{"address":"","city":"","latitude":37.395659599999995,"longitude":-122.14890390000001},"tastingRating":{},"rating":9,"type":"Cappuccino","_id":"jfwcqOzpUE436GO6"}
-{"name":"White Flat","place":"","location":{"address":"","city":"","latitude":37.3956898,"longitude":-122.148907},"tastingRating":{"aroma":4,"flavor":8,"intensity":6,"sweetness":4},"rating":7,"type":"Caffe Macchiato","_id":"GLyKqmQsz1M6E1ei"}
-{"name":"Ambrosia","place":"Philz Coffee","location":{"address":"3191 Middlefield Rd","city":"Palo Alto","latitude":37.3956679,"longitude":-122.1489195},"tastingRating":{},"type":"Affogato","rating":8,"_id":"YU3dRr0K4NPitNOO"}
+{"name":"Bella Donovan","place":"Blue Bottle","location":{"address":"456 University Ave","city":"Palo Alto","latitude":37.3956616,"longitude":-122.1489135},"tastingRating":{},"type":"Drip","rating":7,"_id":"g0l6Zy4VjVxak9YH"}
+{"name":"New Orleans","place":"Blue Bottle","location":{"address":"3081 Delaware Street","city":"San Mateo","latitude":37.3956583,"longitude":-122.14892970000001},"tastingRating":{},"type":"Cold Brew","rating":10,"_id":"ILQg9E99DZZ6XVS6"}
+{"name":"Three Africas","place":"Blue Bottle","location":{"address":"628 California St","city":"San Francisco","latitude":37.3956619,"longitude":-122.14892959999999},"tastingRating":{},"type":"Black Coffee","rating":7,"_id":"UGFBePnn0ivuiWLw"}
+{"name":"Tesora","place":"Philz Coffee","location":{"address":"3191 Middlefield Rd","city":"Palo Alto","latitude":37.3956549,"longitude":-122.14898520000001},"tastingRating":{},"type":"Cappuccino","rating":7,"_id":"EDffI3sTNntTKbDt"}
+{"name":"Sumatra Medium Roast","place":"Philz Coffee","location":{"address":"549 Castro St.","city":"San Francisco","latitude":37.395676699999996,"longitude":-122.14894269999998},"tastingRating":{},"type":"Drip","_id":"iWFMojcScGiy70Sl"}
