@@ -8,7 +8,9 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "wenBuild" : "ng build --bh /wendywen/ng4coffee/",
+    "gitBuild" : "ng build --prod --bh https://sweetymeow.github.io/ng4-material/"
   },
   "private": true,
   "dependencies": {
